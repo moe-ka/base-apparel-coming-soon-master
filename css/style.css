@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+:root{
+    --color-DesaturatedRed: hsl(0, 36%, 70%);
+    --color-Soft-Red: hsl(0, 93%, 68%);
+    --color-DarkGrayishRed: hsl(0, 6%, 24%);
+    --gradient1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --gradient2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+
+    --font-family: 'Josefin Sans', sans-serif;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-size: 16px;
+    font-family: var(--font-family);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	/* smooth effect */
+    transition: all 0.5s ease
+}
+
+/* css start */
+
+.container{
+	display: grid;
+	grid-template-areas: 
+	'logo hero'
+	'content hero'
+	'content hero';
+	background-color: var(--gradient2);
+	grid-template-rows: 1fr 4fr;
+	grid-template-columns: 1fr .8fr;
+	overflow: hidden;
+}
+
+.brand{
+	grid-area: logo;
+	padding: 4rem 0;
+	padding-left: 8rem;
+}
+.content{
+	grid-area: content;
+	
+}
+.content h1{
+	font-size: 5rem;
+	text-transform: uppercase;
+	color: var(--color-DarkGrayishRed);
+}
+.content h1 span{
+	font-weight: 300;
+	color: var(--color-DesaturatedRed);
+}
+
+.content p{
+	line-height: 2rem;
+	color: var(--color-DesaturatedRed);
+	margin: 1rem 0;
+}
+
+.content input{
+	padding: 1rem;
+	width: 90%;
+	border-radius: 2rem;
+	border: 1px solid var(--color-DesaturatedRed);
+	color: var(--color-DesaturatedRed);
+}
+
+::placeholder {
+	color: var(--color-DesaturatedRed);
+	opacity: 1; /* Firefox */
+  }
+.content .input-wrapper{
+	display: flex;
+    height: 4rem;
+	margin-bottom: 1rem;
+	position: relative;
+}
+
+.content input[type="email"] {
+	width: 100%;
+	border-radius:2rem;
+	background:#FFFFFF;
+	outline:none;
+	border: 2px solid var(--color-DesaturatedRed);
+    font-size: 1rem;
+    font-family: var(--font-family);
+	color: var(--color-DarkGrayishRed);
+}
+
+.content .invalid{
+	color: var(--color-Soft-Red);
+	margin-left: 1rem;
+}
+.input-wrapper input:focus:invalid { /* when a field is considered invalid by the browser */
+    background: #fff url(../images/icon-error.svg) no-repeat 70% center;
+    /* box-shadow: 0 0 5px #d45252; */
+    border-color: var(--color-Soft-Red);
+	transition: none;
+}
+.button{
+	width: 26%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    border-radius: 2rem;
+    background: -webkit-linear-gradient(#FF5252, #FF4081); /* For Safari 5.1 to 6.0*/
+    background: -o-linear-gradient(#FF5252, #FF4081); /* For Opera 11.1 to 12.0*/    background: -moz-linear-gradient(#FF5252, #FF4081); /* For Firefox 3.6 to 15*/
+    background: linear-gradient(#FF5252, #FF4081); /*Standard syntax*/             border:none;
+}
+.button i{
+	color: whitesmoke;
+    font-size: 2rem;
+}
+.button:hover{
+	box-shadow: 1px 7px 12px 2px var(--color-DesaturatedRed);
+    cursor: pointer;
+}
+
+/*Place holder color*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--color-DesaturatedRed);
+  font-size:14px;
+  font-weight:bold;
+  padding:5px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	color: var(--color-DesaturatedRed);
+  font-size:14px;
+  font-weight:bold;
+    padding:5px;
+
+  }
+:-ms-input-placeholder { /* IE 10+ */
+	color: var(--color-DesaturatedRed);
+  font-size:14px;
+  font-weight:bold;
+  padding:5px;
+
+  }
+:-moz-placeholder { /* Firefox 18- */
+	color: var(--color-DesaturatedRed);
+  font-size:14px;
+  font-weight:bold;
+  padding:5px;
+  }
+/* end placeholder color */
+
+.hero{
+	grid-area: hero;
+	background-image: url(../images/hero-desktop.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* responsive breakpoint */
+/* @media (min-width: 1240px) {
+	.hero{
+	
+	}
+} */
+@media (max-width: 550px) {
+	.container{
+		grid-template-rows: max-content 250px max-content;
+	}
+	.brand{
+		padding-left: 2rem;
+	}
+	.content h1 {
+		font-size: 3rem;
+	}
+	.content p {
+		font-size: .9rem;
+	}
+
+}
+
+@media (min-width: 675px) {
+	.content{
+		padding: 8rem;
+		padding-top: 3rem;
+	}
+}
+@media (max-width: 675px) {
+	.content{
+		padding: 2rem;
+	}
+}
+@media (min-width: 1240px) {
+	.content{
+		padding-right: 13rem;
+	}
+}
+
+@media (max-width: 1240px) {
+	.container{
+		grid-template-columns: 1fr 1.8fr;
+	}
+	
+}
+
+@media (max-width: 883px) {
+	.container{
+		grid-template-areas: 
+	'logo'
+	'hero'
+	'content';
+	grid-template-columns: 1fr 0;
+	}
+	.content{
+		text-align: center;
+	}
+	.hero{
+		background-image: url(../images/hero-mobile.jpg);
+	}
+	
+}
