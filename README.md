@@ -21,7 +21,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [here](https://github.com/moe-ka/base-apparel-coming-soon-master)
-- Live Site URL: [here](https://your-live-site-url.com)
+- Live Site URL: [here](https://bs-pprl-cmng-sn-mstr.netlify.app/)
 
 ## My process
 
