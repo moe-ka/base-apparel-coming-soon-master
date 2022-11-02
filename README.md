@@ -16,11 +16,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](design/desktop-design.jpg)
 
 ### Links
 
-- Solution URL: [here](https://your-solution-url.com)
+- Solution URL: [here](https://github.com/moe-ka/base-apparel-coming-soon-master)
 - Live Site URL: [here](https://your-live-site-url.com)
 
 ## My process
